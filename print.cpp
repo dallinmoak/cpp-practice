@@ -1,22 +1,30 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
 void printSquare(int side, int unit);
 
 int main(){
-  cout << "I will print a square grid made of squares.\n";
-  cout << "how many squares? ";
   int side;
+  int unit;
+  /*cout << "I will print a square grid made of squares.\n";
+  cout << "how many squares? ";
   cin >> side;
   cout << "how big do you want the squares? ";
-  int unit;
   cin >> unit;
-  printSquare(side, unit);
+  printSquare(side, unit);*/
+  int pwr;
+  cout << "power? ";
+  cin >> pwr;
+  for (int i= 0; i <=pwr; i++){
+    side = pow(2,i);
+    unit = pow(2,pwr)/side;
+    printSquare(side, unit);
+  }
   cout << "\nPress any key, then RETURN to exit\n";
-  //char end[4];
-  //cin >> end;
-  cin >> unit;
+  int junk;
+  cin >> junk;
   return 0;
 }
 
