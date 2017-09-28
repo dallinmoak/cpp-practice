@@ -13,6 +13,7 @@ int main(){
   cin >> side;
   cout << "how big do you want the squares? ";
   cin >> unit;
+<<<<<<< HEAD
   printSquare(side, unit);*/
   int pwr;
   cout << "power? ";
