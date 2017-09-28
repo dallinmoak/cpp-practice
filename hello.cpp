@@ -6,7 +6,6 @@ string goodbyemsg();
 
 //this is a comment that I am adding
 int main() {
-<<<<<<< HEAD
    cout << "Hello, world!\n\n";
    cout << "What is your name? ";
    string name;
