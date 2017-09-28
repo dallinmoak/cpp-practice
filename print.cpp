@@ -5,13 +5,16 @@ using namespace std;
 void printSquare(int side, int unit);
 
 int main(){
+  cout << "I will print a square grid made of squares.\n";
   cout << "how many squares? ";
   int side;
   cin >> side;
-  cout << "unit? ";
+  cout << "how big do you want the squares? ";
   int unit;
   cin >> unit;
   printSquare(side, unit);
+  cout << "\nPress any key to exit";
+  cin >> unit;
   return 0;
 }
 
