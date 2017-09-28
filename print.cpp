@@ -13,7 +13,7 @@ int main(){
   int unit;
   cin >> unit;
   printSquare(side, unit);
-  cout << "\nPress any key, then RETURN to exit\n";
+  cout << "\nPress any key, then RETURN to exit";
   //char end[4];
   //cin >> end;
   cin >> unit;
