@@ -1,12 +1,18 @@
 #include <iostream>
 
+using namespace std;
+
 void printRect(int height, int width);
 
 int main(){
-
+  int height = 3;
+  int width = 3;
   printRect(height,width);
 }
-
+/*
+ _ _
+|   |
+*/
 
 /*
 ok the idea is that it's a graphic division machine.
@@ -18,20 +24,34 @@ a box is 4 characters wide and 2 lines tall.
 
 */
 
-
-
-void printSquare(int side,int unit){
-  for (int j = 0; j <= side * unit; j++){
-    for (int i = 0; i < side*unit; i++) {
-      if(j==0)cout << " _";
-      else if (j%unit){
-        if (i%unit==0)cout << "| ";
-        else cout << "  ";
-      }
-      else if(i%unit==0)cout << "|_";
-      else cout << " _";
+void printRect(int height, int width){
+  int bheight = 2;
+  int bwidth = 2;
+  for (int row =0; row <bheight*height; row++){
+    //first row: print " _" 2 times the width, then print \n
+    if (row == 0){
+      for (int col = 0; col < (bwidth*width); col++)cout << " _";
+      cout << endl;
     }
-    if(j!=0)cout << "|\n";
-    else cout << endl;
+    else if (row%bheight !=0){
+      for (int col = 0; col < (bwidth*width); col++){
+        if (col == 0)cout << "| ";
+        else if (col%bwidth!= 0)cout << "  ";
+        else cout << "| ";
+      }
+      cout << "|\n";
+    }
+    else{
+      for (int col = 0; col < (bwidth*width); col++){
+        if (col%bwidth ==0){
+          if(col+1 ==bwidth* width)cout << "|\n";
+          else cout << "|_";
+        }
+        else if (col%bwidth !=0){
+          cout << " _";
+        }
+      }
+    }
   }
+
 }
