@@ -28,19 +28,26 @@ void printRect(int height, int width){
   int bheight = 2;
   int bwidth = 2;
   for (int row =0; row <bheight*height; row++){
-    //first row: print " _" 2 times the width, then print \n
+    //first row
     if (row == 0){
       for (int col = 0; col < (bwidth*width); col++)cout << " _";
       cout << endl;
     }
+    //middle rows
     else if (row%bheight !=0){
       for (int col = 0; col < (bwidth*width); col++){
-        if (col == 0)cout << "| ";
-        else if (col%bwidth!= 0)cout << "  ";
-        else cout << "| ";
+        //edgle columns
+        if (col%bwidth == 0){
+          //last edgle
+          if (col+1 == (bwidth*width))cout << "|\n";
+          //all other edges
+          else cout << "| ";
+        }
+        //middle columns
+        else cout << "  ";
       }
-      cout << "|\n";
     }
+    //bottom rows
     else{
       for (int col = 0; col < (bwidth*width); col++){
         if (col%bwidth ==0){
