@@ -4,7 +4,7 @@
 using namespace std;
 
 void printStars(int row, int col);
-string topStripes(int r);
+void topStripes(int c);
 void printStripes(int row, int col);
 
 
@@ -23,24 +23,55 @@ void printStars(int row, int col){
       else if (j==0)cout << "   *";
       else cout << "    *";
     }
-    if (i%2 ==0) cout << "*\n"<< topStripes(row);
+    if (i%2 ==0){
+      cout << "*";
+      topStripes(col);
+    }
     else cout << endl;
   }
 }
 
-string topStripes(int r){
-  char str[] = "";
-  for (int i = 0;i<(3*r);i++){
-    strcat (str, "____");
+void topStripes(int c){
+  cout << "    ";
+  string str = "";
+  for (int i = 0;i<(3*c);i++){
+    if (i%2 ==0)str += "_";
+    else str += "__";
   }
-  return str;
+  cout << str << endl;
 }
 
 void printStripes(int row, int col){
-  for (int i = 0; i < row; i++){
-    for (int j=0; j < (3*col); j++){
-      cout << "____";
+  for (int i = 0; i < (2*row); i++){
+    for (int j=0; j < (5*col); j++){
+      if(i%2==0) cout << "";
+      else if(j%2 ==0)cout << "_";
+      else cout << "__";
     }
     cout << endl;
   }
 }
+
+/*
+
+*    *    *    *    *    *_____________________________________________
+   *    *    *    *    *
+*    *    *    *    *    *_____________________________________________
+   *    *    *    *    *
+*    *    *    *    *    *_____________________________________________
+   *    *    *    *    *
+*    *    *    *    *    *_____________________________________________
+   *    *    *    *    *
+*    *    *    *    *    *_____________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+*/
