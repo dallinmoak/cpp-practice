@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-  char str[] = "";
-  strcat(str,"asdf");
+  string str = "";
+  str += "asdf";
   cout << str;
 }
