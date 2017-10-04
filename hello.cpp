@@ -41,7 +41,7 @@ void topStripes(int c){
   cout << str << endl;
 }
 
-void printStripes (int row, int col){
+void printStripes(int row, int col){
   for (int i = 0; i < (2*row); i++){
     for (int j=0; j < (5*col); j++){
       if(i%2==0) cout << "";
