@@ -3,6 +3,7 @@
 using namespace std;
 
 void printbSize(int nBlocks, int bSize);
+void printRows(int num, int bSize);
 
 int main(){
   int num;
@@ -14,13 +15,30 @@ int main(){
 }
 
 void printbSize(int nBlocks, int bSize){
-  for (int blocks = 1; blocks <= nBlocks; blocks++){
-    for (int i=0; i <(bSize-1); i ++){
-      cout << " _";
-    }
-    cout << "|_";
+  int max =20;
+  int rows = nBlocks/max;
+  int remain= nBlocks%max;
+  for (int rowCount = 0; rowCount < rows; rowCount++){
+    printRows(max,bSize);
+  }
+  printRows(remain,bSize);
+}
+
+void printRows(int num, int bSize){
+  for (int i=0; i < num*bSize; i++){
+    cout << " _";
   }
   cout << endl;
+  for (int i=0; i < num*bSize; i++){
+    if(i%bSize==0) cout << "| ";
+    else cout << "  ";
+  }
+  cout << "|\n";
+  for (int i=0; i < num*bSize; i++){
+    if(i%bSize==0) cout << "|_";
+    else cout << " _";
+  }
+  cout << "|\n";
 }
 
 /*
