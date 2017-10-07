@@ -48,7 +48,8 @@ int main(){
        << distanceBetween(p1,p2) << "\n";
 }
 
-//calculates the distance b
+//calculates the distance between two points
+
 double distanceBetween(Point p1, Point p2){
   double square = pow(p1.getX()-p2.getX(),2)+pow(p1.getY()-p2.getY(),2);
   return sqrt(square);
