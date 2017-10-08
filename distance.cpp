@@ -46,8 +46,6 @@ int main(){
   cout << "p2: (" << p2.getX() << "," << p2.getY() << ")\n";
   cout << "the distance between p1 and p2 is "
        << distanceBetween(p1,p2) << "\n";
-  int n;
-  cout << sizeof(n);
 }
 
 //calculates the distance between two points
