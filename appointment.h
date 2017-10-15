@@ -9,9 +9,9 @@ public:
   Appointment();
   Appointment(string n);
   int getTime();
-  int getName();
-  void setTime(int t);
-  void setName(string n);
+  string getName();
+  void setTime(int t) const;
+  void setName(string n) const;
 private:
   string name;
   int timex;
