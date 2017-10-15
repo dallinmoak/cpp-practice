@@ -1,6 +1,6 @@
 #include "appointment.h"
 #include <iostream>
-
+#include "appointment.h"
 using namespace std;
 
 int main(){

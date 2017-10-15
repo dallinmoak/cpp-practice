@@ -11,24 +11,26 @@ Appointment::Appointment(){
 }
 
 Appointment::Appointment(string n){
+  name = n;
   isconflicted = false;
   timex = 0;
   name = n;
 
 }
 
-int getTime() const{
+int Appointment::getTime() const{
   return timex;
 }
 
-string getName()const{
+string Appointment::getName() const{
+
   return name;
 }
 
-void setTime(int t){
+void Appointment::setTime(int t){
   timex = t;
 }
 
-void setName(string n){
+void Appointment::setName(string n){
   name = n;
 }

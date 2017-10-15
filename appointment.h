@@ -9,10 +9,10 @@ class Appointment{
 public:
   Appointment();
   Appointment(string n);
-  int getTime();
-  string getName();
-  void setTime(int t) const;
-  void setName(string n) const;
+  int getTime() const;
+  string getName() const;
+  void setTime(int t);
+  void setName(string n);
 private:
   string name;
   int timex;
