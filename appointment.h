@@ -8,8 +8,8 @@ class Appointment{
 public:
   Appointment();
   Appointment(string n);
-  int getTime();
-  int getName();
+  int getTime() const;
+  string getName() const;
   void setTime(int t);
   void setName(string n);
 private:

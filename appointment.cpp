@@ -1,4 +1,4 @@
-//#include "appointment.h"
+#include "appointment.h"
 #include <string>
 
 
@@ -10,22 +10,23 @@ Appointment::Appointment(){
 }
 
 Appointment::Appointment(string n){
+  name = n;
   isconflicted = false;
   timex = 0;
 }
 
-int getTime(){
+int Appointment::getTime() const{
   return timex;
 }
 
-string getName(){
+string Appointment::getName() const{
   return name;
 }
 
-void setTime(int t){
+void Appointment::setTime(int t){
   timex = t;
 }
 
-void setName(string n){
+void Appointment::setName(string n){
   name = n;
 }
