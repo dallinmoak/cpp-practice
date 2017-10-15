@@ -7,12 +7,15 @@ using namespace std;
 Appointment::Appointment(){
     isconflicted = false;
     timex = 0;
+    name = "";
 }
 
 Appointment::Appointment(string n){
   name = n;
   isconflicted = false;
   timex = 0;
+  name = n;
+
 }
 
 int Appointment::getTime() const{
@@ -20,6 +23,7 @@ int Appointment::getTime() const{
 }
 
 string Appointment::getName() const{
+
   return name;
 }
 
