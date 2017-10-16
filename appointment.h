@@ -18,5 +18,5 @@ private:
   int timex;
   bool isconflicted;
 };
-//this is a comment from c9
+
 #endif
