@@ -1,6 +1,6 @@
 #include "appointment.h"
 #include <string>
-
+#include <ctime>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ Appointment::Appointment(string n){
 
 }
 
-int Appointment::getTime() const{
+time_t Appointment::getTime() const{
   return timex;
 }
 
@@ -26,7 +26,7 @@ string Appointment::getName() const{
   return name;
 }
 
-void Appointment::setTime(int t){
+void Appointment::setTime(time_t t){
   timex = t;
 }
 

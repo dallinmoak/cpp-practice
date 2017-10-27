@@ -1,10 +1,14 @@
 #include "appointment.h"
 #include <iostream>
 #include "appointment.h"
+#include <string>
+#include <ctime>
+
 using namespace std;
+
 
 int main(){
   Appointment a("george");
-  cout << a.getName();
+  appointment.setTime(
   return 0;
 }

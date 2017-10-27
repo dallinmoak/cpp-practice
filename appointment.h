@@ -1,6 +1,7 @@
 #ifndef APPOINTMENT_H
 #define APPOINTMENT_H
 #include <string>
+#include <ctime>
 
 
 using namespace std;
@@ -9,13 +10,13 @@ class Appointment{
 public:
   Appointment();
   Appointment(string n);
-  int getTime() const;
+  time_t getTime() const;
   string getName() const;
-  void setTime(int t);
+  void setTime(time_t t);
   void setName(string n);
 private:
   string name;
-  int timex;
+  time_t timex;
   bool isconflicted;
 };
 
